@@ -1,0 +1,113 @@
+{% extends "portfolio/base.html" %} {% load static %} {% block content %}
+<div class="row mb-3">
+  <div class="col-md-9">
+    <h1 id="hometext" class="font-weight-bold">
+      Zeus Info-Tech Solutions.
+    </h1>
+  </div>
+</div>
+<div class="row mb-3">
+  <div class="col-md-9">
+    <p id="info" class="font-weight-light">
+      Zeus IT Solutions is the growing team of IT Experts.Contact us for
+      Building website,desktop/mobile apps,IOT projects,Networking. Mail:<colour
+        id="mail"
+        style="color: #f70101; font-weight: bold;"
+        >Zeusinfotech69@gmail.com</colour
+      >
+    </p>
+  </div>
+</div>
+<div class="row justify-content-center mb-3">
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/Zeus-Info-Tech-Solutions-100302215102547/"
+      ><i class="fab fa-facebook"></i
+    ></a>
+    <a
+      href="https://www.youtube.com/c/Gonelastvirus/featured?view_as=subscriber"
+      ><i class="fab fa-youtube"></i
+    ></a>
+    <a href="https://www.linkedin.com/in/gone-lastvirus-3613181ab/"
+      ><i class="fab fa-linkedin-in"></i
+    ></a>
+  </div>
+</div>
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext1" class="font-weight-bold">
+      <i
+        class="fa fa-arrow-circle-down"
+        style="text-shadow: 0px 0px 15px rgb(0, 204, 255);"
+      ></i>
+    </h1>
+  </div>
+</div>
+<br />
+<br />
+<u style="color: white;"
+  ><h3 style="color: rgb(10, 228, 173);">Leading Members</h3></u
+>
+<hr />
+<div class="row">
+  {% for profile in profiles %}
+  <div class="col-lg-4 col-md-6">
+    {% if profile.url %}
+    <a href="{{ profile.url }}">
+      <img
+        src="{{ profile.image.url }}"
+        class="rounded-circle"
+        width="200"
+        height="190"
+      />
+    </a>
+    {% else %}
+
+    <img
+      src="{{ profile.image.url }}"
+      class="rounded-circle"
+      width="200"
+      height="190"
+    />
+    {% endif %}
+    <h3 style="color: white; margin-left: 1rem;">{{ profile.title }}</h3>
+    <pre style="color: white; margin-left: 1.1rem;">
+{{ profile.discription|striptags | linebreaks }}</pre
+    >
+  </div>
+  {% endfor %}
+</div>
+<br />
+<br />
+<u style="color: white;"
+  ><h3 style="color: rgb(10, 228, 173);">Team Members</h3></u
+>
+<hr />
+<div class="row">
+  {% for profiles in profile %}
+  <div class="col-lg-4 col-md-6">
+    {% if profiles.url %}
+    <a href="{{ profiles.url }}">
+      <img
+        src="{{ profiles.image.url }}"
+        class="rounded-circle"
+        width="140"
+        height="130"
+      />
+    </a>
+    {% else %}
+
+    <img
+      src="{{ profiles.image.url }}"
+      class="rounded-circle"
+      width="140"
+      height="130"
+    />
+    {% endif %}
+    <h3 style="color: white;">{{ profiles.title }}</h3>
+    <pre style="color: white; margin-left: 0.6rem;">
+{{ profiles.discription|striptags | linebreaks }}</pre
+    >
+  </div>
+  {% endfor %}
+</div>
+{%endblock%}

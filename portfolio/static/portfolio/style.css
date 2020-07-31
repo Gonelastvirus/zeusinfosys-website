@@ -1,0 +1,103 @@
+.navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(14, 165, 102) !important;
+}
+.navbar-nav .nav-link:active {
+  text-shadow: white;
+}
+@font-face {
+  font-family: LCALLIG;
+  src: url("LCALLIG.TTF");
+}
+body {
+  background-image: url(bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+}
+#hometext {
+  color: white;
+  font-size: 3.2rem;
+  margin: 3.2rem 2rem;
+  font-family: LCALLIG;
+}
+#hometext1 {
+  color: white;
+  font-size: 5rem;
+  margin: 2rem 2rem;
+  font-family: LCALLIG;
+}
+#info {
+  font-weight: lighter;
+  color: white;
+  font-style: unset;
+  margin-top: -3.8rem;
+  margin-left: 2rem;
+  font-size: 0.9rem;
+}
+
+.social-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.social-buttons a::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #01b5fc, #292929);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before {
+  transform: scale(0);
+}
+
+.social-buttons a i {
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i {
+  background: linear-gradient(45deg, #22a6b3, #30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+@media (min-width: 992px) {
+  #hometext {
+    color: white;
+    font-size: 5.5rem;
+    margin: 3.7rem 2rem;
+    font-family: LCALLIG;
+  }
+  #hometext1 {
+    color: white;
+    font-size: 5rem;
+    margin: 2.8rem 2rem;
+    font-family: LCALLIG;
+  }
+  #info {
+    font-weight: lighter;
+    color: white;
+    font-style: unset;
+    margin-top: -3.8rem;
+    margin-left: 2rem;
+    font-size: 0.98rem;
+  }
+}
